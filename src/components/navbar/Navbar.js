@@ -4,6 +4,7 @@ import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdCancel, MdOutlineAccountCircle } from "react-icons/md";
+import CustomScroll from 'react-custom-scroll';
 const Navbar = () => {
   const ref = useRef();
   const crtControl = () => {
@@ -51,9 +52,10 @@ const Navbar = () => {
           </div>
         </nav>
         {/* Side Bar */}
+      
         <div
           ref={ref}
-          className="w-96 z-10 h-full overflow-y-auto absolute rounded left-0 top-15   bg-pink-200 transform px-7 py-10 
+          className="w-96 z-10 h-full overflow-y-auto absolute rounded left-0 top-15 bg-black transform px-7 py-10 
 translate-x-0 transition-transform"
         >
           <h2 className="text-xl font-bold text-center">Shopping Cart</h2>
@@ -63,6 +65,65 @@ translate-x-0 transition-transform"
           >
             <MdCancel />
           </span>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+          <div className=" text-white mt-6 text-lg font-semibold">
+            Your Cart is Empty!
+          </div>
+       
         </div>
       </header>
     </div>
