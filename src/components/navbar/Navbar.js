@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
-import { MdCancel, MdOutlineAccountCircle } from "react-icons/md";
-import CustomScroll from 'react-custom-scroll';
+import { MdOutlineAccountCircle } from "react-icons/md";
+import CustomScroll from "react-custom-scroll";
+import data from "../../utils/items.json";
+import { FaBeer } from 'react-icons/fa';
 const Navbar = () => {
   const ref = useRef();
   const crtControl = () => {
@@ -16,6 +18,9 @@ const Navbar = () => {
       ref.current.classList.add("translate-x-0");
     }
   };
+  function createMarkup(c) {
+    return { __html: c };
+  }
   return (
     <div>
       <header>
@@ -52,78 +57,26 @@ const Navbar = () => {
           </div>
         </nav>
         {/* Side Bar */}
-      
+
         <div
           ref={ref}
-          className="w-96 z-10 h-full overflow-y-auto absolute rounded left-0 top-15 bg-black transform px-7 py-10 
+          className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform 
 translate-x-0 transition-transform"
         >
-          <h2 className="text-xl font-bold text-center">Shopping Cart</h2>
-          <span
-            onClick={crtControl}
-            className="text-lg absolute top-3 right-3 cursor-pointer"
-          >
-            <MdCancel />
-          </span>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-          <div className=" text-white mt-6 text-lg font-semibold">
-            Your Cart is Empty!
-          </div>
-       
+          {data.map((item) => {
+            return (
+              <div
+                key={item.id}
+                className="flex items-center hover:bg-gray-800 text-white rounded text-[1rem] py-4 px-4 cursor-pointer"
+              >
+                <div
+                  className=" text-2xl px-5"
+                  dangerouslySetInnerHTML={createMarkup(item.icon)}
+                />
+                {item.name}
+              </div>
+            );
+          })}
         </div>
       </header>
     </div>
