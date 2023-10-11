@@ -5,8 +5,8 @@ import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import CustomScroll from "react-custom-scroll";
-import data from "../../utils/items.json";
-import { FaBeer } from 'react-icons/fa';
+import { items } from '@/utils/items'
+import { explore } from '@/utils/items'
 const Navbar = () => {
   const ref = useRef();
   const crtControl = () => {
@@ -60,23 +60,43 @@ const Navbar = () => {
 
         <div
           ref={ref}
-          className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform 
-translate-x-0 transition-transform"
+          className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform  transition-transform"
         >
-          {data.map((item) => {
+          {items.map((item) => {
             return (
               <div
                 key={item.id}
-                className="flex items-center hover:bg-gray-800 text-white rounded text-[1rem] py-4 px-4 cursor-pointer"
+                className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
+                my-2 mx-2 py-2 px-4 cursor-pointer"
               >
                 <div
-                  className=" text-2xl px-5"
-                  dangerouslySetInnerHTML={createMarkup(item.icon)}
-                />
+                  className="text-2xl px-5"
+                >{item.icon}</div>
                 {item.name}
               </div>
             );
           })}
+
+          {/* Border div */}
+          <div className="text-white border-t-[1px] border-gray-500 mb-4" />
+          {/* Explore div Element */}
+          <div>
+            <span className=" text-white text-xl mx-4 mt-4"> Explore</span>
+            {explore.map((item) => {
+              return (
+                <div
+                  key={item.id}
+                  className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
+                 my-2 mx-2 py-2 px-4 cursor-pointer"
+                >
+                  <div
+                    className="text-2xl px-5"
+                  >{item.icon}</div>
+                  {item.name}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </header>
     </div>
