@@ -6,7 +6,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import NoteContext from "@/context/NoteContext";
 const Navbar = () => {
-  const data = useContext(NoteContext)
+  const { Items } = useContext(NoteContext)
   const ref = useRef();
   const crtControl = () => {
     if (ref.current.classList.contains("translate-x-0")) {
@@ -59,7 +59,7 @@ const Navbar = () => {
           ref={ref}
           className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform  transition-transform"
         >
-          {data.map((item) => {
+          {Items.map((item) => {
             return (
               <div
                 key={item?.id}
@@ -79,7 +79,7 @@ const Navbar = () => {
           {/* Explore div Element */}
           <div>
             <span className=" text-white text-xl mx-4 mt-4"> Explore</span>
-            {data.map((item) => {
+            {Items.map((item) => {
               return (
                 <div
                   key={item.id}
