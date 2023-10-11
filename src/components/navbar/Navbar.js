@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
-import { items } from '@/utils/items'
+import NoteContext from "@/context/NoteContext";
 const Navbar = () => {
+  const data = useContext(NoteContext)
   const ref = useRef();
   const crtControl = () => {
     if (ref.current.classList.contains("translate-x-0")) {
@@ -58,17 +59,17 @@ const Navbar = () => {
           ref={ref}
           className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform  transition-transform"
         >
-          {items.map((item) => {
+          {data.map((item) => {
             return (
               <div
-                key={item.id}
+                key={item?.id}
                 className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
                   my-2 mx-2 py-2 px-4 cursor-pointer"
               >
                 <div
                   className="text-2xl px-5"
-                >{item.icon}</div>
-                {item.name}
+                >{item?.icon}</div>
+                {item?.name}
               </div>
             );
           })}
@@ -78,7 +79,7 @@ const Navbar = () => {
           {/* Explore div Element */}
           <div>
             <span className=" text-white text-xl mx-4 mt-4"> Explore</span>
-            {items.map((item) => {
+            {data.map((item) => {
               return (
                 <div
                   key={item.id}
@@ -87,8 +88,8 @@ const Navbar = () => {
                 >
                   <div
                     className="text-2xl px-5"
-                  >{item.icon}</div>
-                  {item.name}
+                  >{item?.icon}</div>
+                  {item?.name}
                 </div>
               );
             })}
