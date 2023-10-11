@@ -1,12 +1,10 @@
 import React, { useRef } from "react";
-import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
-import CustomScroll from "react-custom-scroll";
 import { items } from '@/utils/items'
-import { explore } from '@/utils/items'
 const Navbar = () => {
   const ref = useRef();
   const crtControl = () => {
@@ -18,9 +16,7 @@ const Navbar = () => {
       ref.current.classList.add("translate-x-0");
     }
   };
-  function createMarkup(c) {
-    return { __html: c };
-  }
+
   return (
     <div>
       <header>
@@ -38,7 +34,7 @@ const Navbar = () => {
               name="search"
               id="search"
               className=" bg-gray-900  border-gray-600 w-[40rem] py-2 focus:outline-blue-700 
-              rounded-l-3xl"
+                rounded-l-3xl"
             />
             <span className="text-xl px-3 py-3 hover:bg-gray-700  bg-gray-800 mx-5  rounded-full">
               <BsMic />
@@ -67,7 +63,7 @@ const Navbar = () => {
               <div
                 key={item.id}
                 className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
-                my-2 mx-2 py-2 px-4 cursor-pointer"
+                  my-2 mx-2 py-2 px-4 cursor-pointer"
               >
                 <div
                   className="text-2xl px-5"
@@ -82,12 +78,12 @@ const Navbar = () => {
           {/* Explore div Element */}
           <div>
             <span className=" text-white text-xl mx-4 mt-4"> Explore</span>
-            {explore.map((item) => {
+            {items.map((item) => {
               return (
                 <div
                   key={item.id}
                   className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
-                 my-2 mx-2 py-2 px-4 cursor-pointer"
+                  my-2 mx-2 py-2 px-4 cursor-pointer"
                 >
                   <div
                     className="text-2xl px-5"

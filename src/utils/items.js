@@ -1,4 +1,4 @@
-import { BsCollectionPlay } from "react-icons/bs";
+import { BsCollectionPlay, BsCupFill } from "react-icons/bs";
 import { MdOutlineWatchLater, MdSlowMotionVideo, MdVideoLibrary } from "react-icons/md";
 import { GoHistory, GoVideo } from 'react-icons/go'
 const { AiOutlineHome, AiOutlineLike } = require("react-icons/ai");
@@ -39,43 +39,42 @@ export const items = [
         icon: <GoVideo />
     },
     {
-        id: 6,
+        id: 7,
         name: "Watch later",
         icon: <MdOutlineWatchLater />
     },
     {
-        id: 6,
+        id: 8,
         name: "Your Clips",
         icon: <BiCut />
     },
     {
-        id: 6,
+        id: 9,
         name: "Liked Videos",
         icon: <AiOutlineLike />
     },
-];
-
-
-
-
-export const explore = [
     {
-        id: 1,
+        id: 10,
         name: "Trending",
         icon: <FaFireAlt />
     }, {
-        id: 2,
+        id: 11,
         name: "Music",
         icon: <IoMusicalNoteOutline />
     },
     {
-        id: 3,
+        id: 12,
         name: "Gaming",
         icon: <SiYoutubegaming />
     }, {
-        id: 4,
+        id: 13,
         name: "News",
         icon: <HiOutlineNewspaper />
     },
+    {
+        id: 14,
+        name: "Sports",
+        icon: <BsCupFill />
+    }
+];
 
-]
