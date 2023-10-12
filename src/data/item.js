@@ -1,15 +1,9 @@
-
-import { BsCollectionPlay } from "react-icons/bs";
+import { AiOutlineHistory, AiOutlineHome, AiOutlineLike, AiOutlineVideoCamera } from "react-icons/ai";
+import { BsCollectionPlay, BsFire } from "react-icons/bs";
+import { IoMdCut, IoMdMusicalNote } from "react-icons/io";
 import { MdOutlineWatchLater, MdSlowMotionVideo, MdVideoLibrary } from "react-icons/md";
-import { GoHistory, GoVideo } from 'react-icons/go'
-import { AiOutlineHome, AiOutlineLike } from "react-icons/ai";
-import { BiCut } from 'react-icons/bi'
-import { FaFireAlt } from 'react-icons/fa'
-import { IoMusicalNoteOutline } from 'react-icons/io'
-import { SiYoutubegaming } from 'react-icons/si'
 import { HiOutlineNewspaper } from 'react-icons/hi'
-import { BsCupFill } from "react-icons/bs";
-
+import { SiYoutubegaming } from 'react-icons/si'
 export const item = [
     {
         id: 1,
@@ -34,12 +28,12 @@ export const item = [
     {
         id: 5,
         name: "History",
-        icon: <GoHistory />
+        icon: <AiOutlineHistory />
     },
     {
         id: 6,
         name: "Your Videos",
-        icon: <GoVideo />
+        icon: <AiOutlineVideoCamera />
     },
     {
         id: 7,
@@ -49,7 +43,7 @@ export const item = [
     {
         id: 8,
         name: "Your Clips",
-        icon: <BiCut />
+        icon: <IoMdCut />
     },
     {
         id: 9,
@@ -59,12 +53,12 @@ export const item = [
     {
         id: 10,
         name: "Trending",
-        icon: <FaFireAlt />
+        icon: <BsFire />
     },
     {
         id: 11,
         name: "Music",
-        icon: <IoMusicalNoteOutline />
+        icon: <IoMdMusicalNote />
     },
     {
         id: 12,
@@ -79,6 +73,6 @@ export const item = [
     {
         id: 14,
         name: "Sports",
-        icon: <BsCupFill />
+        icon: <BsCollectionPlay />
     }
 ];

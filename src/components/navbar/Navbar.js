@@ -19,6 +19,9 @@ const Navbar = () => {
     }
   };
 
+  if(!item){
+  return <div>Loading</div>
+  }
   return (
     <div>
       <header>
@@ -35,14 +38,15 @@ const Navbar = () => {
               type="search"
               name="search"
               id="search"
-              className=" bg-gray-900  border-gray-600 w-[40rem] py-2 focus:outline-blue-700 
+              className=" bg-gray-900  border-none w-[40rem] px-8 py-2 focus:outline-blue-700 
                 rounded-l-3xl"
+                placeholder="Search"
             />
             <span className="text-xl px-3 py-3 hover:bg-gray-700  bg-gray-800 mx-5  rounded-full">
               <BsMic />
             </span>
           </div>
-          <div className=" flex items-center md:mx-20 space-x-6">
+          <div className=" flex items-center md:mx-16 space-x-12">
             <span className="md:text-2xl ">
               <PiCameraPlusBold />
             </span>
@@ -60,7 +64,7 @@ const Navbar = () => {
           ref={ref}
           className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform  transition-transform"
         >
-          {item.map((i) => {
+          {item.slice(0, 9).map((i) => {
             return (
               <div
                 key={i.id}
@@ -80,20 +84,20 @@ const Navbar = () => {
           {/* Explore div Element */}
           <div>
             <span className=" text-white text-xl mx-4 mt-4"> Explore</span>
-            {/* {item.map((item) => {
+            {item.slice(9, 14).map((i) => {
               return (
                 <div
-                  key={item.id}
+                  key={i.id}
                   className="flex items-center hover:bg-gray-800 rounded-xl text-white text-[1rem] 
                   my-2 mx-2 py-2 px-4 cursor-pointer"
                 >
                   <div
                     className="text-2xl px-5"
-                  >{item.icon}</div>
-                  {item.name}
+                  >{i.icon}</div>
+                  {i.name}
                 </div>
               );
-            })} */}
+            })}
           </div>
         </div>
       </header>
