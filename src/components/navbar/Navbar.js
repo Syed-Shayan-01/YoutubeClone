@@ -4,7 +4,7 @@ import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
-import { item } from "@/data/item";
+import { item } from "@/utils/item";
 // import NoteContext from "@/context/NoteContext";
 const Navbar = () => {
   // const { Items } = useContext(NoteContext)
