@@ -62,7 +62,8 @@ const Navbar = () => {
 
         <div
           ref={ref}
-          className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform  transition-transform"
+          className="w-60 z-10 h-full overflow-y-auto absolute left-0 top-15 bg-black transform
+          hidden  transition-transform"
         >
           {item.slice(0, 9).map((i) => {
             return (
