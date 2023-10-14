@@ -38,9 +38,8 @@ const Navbar = ({ handleSearch }) => {
           <div className="hidden md:flex items-center mr-4">
             <div className="relative block max-md:hidden">
               <input type="search" id="default-search" className={`block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
-                 text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500
-                 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                 dark:text-white focus:outline-blue-400 dark:focus:outline-blue-500 dark:focus:border-blue-500`}
+                 text-gray-900 border border-gray-300 rounded-2xl focus:ring-blue-500
+                 focus:outline-blue-500`}
                 placeholder="Search" required onChange={e => handleSearch(e.target.value)} />
             </div>
             <span className="text-xl px-3 py-3 hover:bg-gray-700 bg-gray-800 mx-5 rounded-full">
@@ -48,19 +47,19 @@ const Navbar = ({ handleSearch }) => {
             </span>
           </div>
 
-            <div className="flex items-center">
+          <div className="flex items-center">
 
-              <span className="text-2xl">
+            <span className="text-2xl">
 
-                <PiCameraPlusBold />
-              </span>
-              <span className="text-2xl mx-4">
-                <IoIosNotificationsOutline />
-              </span>
-              <span className="text-2xl">
-                <MdOutlineAccountCircle />
-              </span>
-            </div>
+              <PiCameraPlusBold />
+            </span>
+            <span className="text-2xl mx-4">
+              <IoIosNotificationsOutline />
+            </span>
+            <span className="text-2xl">
+              <MdOutlineAccountCircle />
+            </span>
+          </div>
         </nav>
 
         {/* Side Bar */}
