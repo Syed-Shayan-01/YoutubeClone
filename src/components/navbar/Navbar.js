@@ -38,7 +38,7 @@ const Navbar = ({ handleSearch }) => {
           <div className="hidden md:flex items-center mr-4">
             <div className="relative block max-md:hidden">
               <input type="search" id="default-search" className={`block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
-                 text-gray-900 border dark:bg-black border-gray-300 rounded-2xl focus:ring-blue-500
+                 text-gray-900 border text-black dark:bg-black border-gray-300 rounded-2xl focus:ring-blue-500
                  focus:outline-blue-500`}
                 placeholder="Search" required onChange={e => handleSearch(e.target.value)} />
             </div>
