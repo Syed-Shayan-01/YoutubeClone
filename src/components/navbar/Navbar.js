@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { BsMic, BsSearch } from "react-icons/bs";
+import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
@@ -37,8 +37,8 @@ const Navbar = ({ handleSearch }) => {
 
           <span className=" md:mr-8 text-2xl font-bold">Video Tube</span>
           <div className="hidden md:flex items-center mr-4">
-            <div class="relative block max-md:hidden">
-              <input type="search" id="default-search" class={`block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
+            <div className="relative block max-md:hidden">
+              <input type="search" id="default-search" className={`block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
                  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500
                  focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                  dark:text-white focus:outline-blue-400 dark:focus:outline-blue-500 dark:focus:border-blue-500`}

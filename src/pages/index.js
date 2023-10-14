@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 
 import Category from "@/components/category/Category";
 import Navbar from "@/components/navbar/Navbar";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 const Home = (props) => {
