@@ -36,7 +36,7 @@ const Navbar = ({ handleSearch }) => {
 
           <span className=" md:mr-8 text-2xl font-bold">Video Tube</span>
           <div className="hidden md:flex items-center mr-4">
-            <div className="relative block max-md:hidden">
+            <div className="relative block max-md:hidden text-black px-4">
               <input type="search" id="default-search" className={`block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
                   border text-black dark:bg-black border-gray-300 rounded-2xl focus:ring-blue-500
                  focus:outline-blue-500`}
