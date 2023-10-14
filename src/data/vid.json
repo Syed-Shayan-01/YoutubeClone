@@ -34,5 +34,23 @@
         "vidComments": "fhsdfjsd",
         "video": "https://www.youtube.com/embed/rfV24zXG3Kw?si=7x5qXPeXvd2X-ZHI",
         "vidThumb": "https://fastly.picsum.photos/id/339/536/354.jpg?hmac=1r2hSWCuclyGNGdoKel-sJ7ICl-05e2Ln1LQTo65buA"
+    },
+    {
+        "id": 5,
+        "vidName": "Focuses on web development, including HTML, CSS, JavaScript, and popular frameworks like React and Vue.js.",
+        "channelName": "Syed Shayan",
+        "vidDes": "djklsajsjadsjajldsajfdalfhfsafosdfudsofoisapfhashfdsafjdshf",
+        "vidComments": "fhsdfjsd",
+        "video": "https://www.youtube.com/embed/rfV24zXG3Kw?si=7x5qXPeXvd2X-ZHI",
+        "vidThumb": "https://fastly.picsum.photos/id/339/536/354.jpg?hmac=1r2hSWCuclyGNGdoKel-sJ7ICl-05e2Ln1LQTo65buA"
+    },
+    {
+        "id": 6,
+        "vidName": "Focuses on web development, including HTML, CSS, JavaScript, and popular frameworks like React and Vue.js.",
+        "channelName": "Syed Shayan",
+        "vidDes": "djklsajsjadsjajldsajfdalfhfsafosdfudsofoisapfhashfdsafjdshf",
+        "vidComments": "fhsdfjsd",
+        "video": "https://www.youtube.com/embed/rfV24zXG3Kw?si=7x5qXPeXvd2X-ZHI",
+        "vidThumb": "https://fastly.picsum.photos/id/339/536/354.jpg?hmac=1r2hSWCuclyGNGdoKel-sJ7ICl-05e2Ln1LQTo65buA"
     }
 ]

@@ -28,21 +28,22 @@ const Navbar = ({ handleSearch }) => {
 
           <span
             onClick={crtControl}
-            className="text-xl px-3 py-3 hover:bg-gray-700 bg-gray-800 mx-5 rounded-full "
+            className="text-xl  py-3 hover:bg-gray-700 bg-gray-800 rounded-full "
           >
             <AiOutlineMenu />
           </span>
 
-          <span className="mr-4 md:mr-20 text-2xl font-bold">Video Tube</span>
+          <span className="mr-4 md:mr-8 text-2xl font-bold">Video Tube</span>
           <div className="hidden md:flex items-center mr-4">
-            <input
-              type="search"
-              name="search"
-              id="search"
-              onChange={e => { handleSearch(e.target.value) }}
-              className="bg-gray-900 border-none w-68 md:w-[40rem] px-4 py-2 focus:outline-blue-700 rounded-l-full rounded-r-full"
-              placeholder="Search"
-            />
+            <div class="relative">
+              <input type="search" id="default-search" class="block md:w-[20rem] lg:w-[40rem] p-4 pl-10 text-sm
+                 text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500
+                 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                 dark:text-white focus:outline-blue-400 dark:focus:outline-blue-500 dark:focus:border-blue-500"
+                placeholder="Search" required onChange={e => handleSearch(e.target.value)} />
+              <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+
             <span className="text-xl px-3 py-3 hover:bg-gray-700 bg-gray-800 mx-5 rounded-full">
               <BsMic />
             </span>
