@@ -6,7 +6,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { item } from "@/utils/item";
 
-const Navbar = () => {
+const Navbar = ({ handleSearch }) => {
   const ref = useRef();
   const crtControl = () => {
     if (ref.current.classList.contains("translate-x-0")) {
@@ -39,6 +39,7 @@ const Navbar = () => {
               type="search"
               name="search"
               id="search"
+              onChange={e => { handleSearch(e.target.value) }}
               className="bg-gray-900 border-none w-68 md:w-[40rem] px-4 py-2 focus:outline-blue-700 rounded-l-full rounded-r-full"
               placeholder="Search"
             />

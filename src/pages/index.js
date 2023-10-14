@@ -1,28 +1,24 @@
 
+import Category from "@/components/category/Category";
+import Filter from "@/components/filterVidPage/Filter";
 import Navbar from "@/components/navbar/Navbar";
+import { useState } from "react";
 const Home = (props) => {
   const { data } = props
+ const items = data.map((item) =>{item.vidName})
+  const [searchQuery, setSearchQuery] = useState('');
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
   return (
 
     <>
-      <Navbar />
-      <div className="p-4 border-t border-b">
-        <div className="flex flex-wrap justify-center -mx-2">
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 active:bg-gray-900 active:text-white active:border-gray-900">All</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 1</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 2</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 3</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 4</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 5</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 6</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 7</button>
-          <button className="mx-2 mb-2 whitespace-no-wrap border rounded-md text-white bg-black py-2 px-4 text-base cursor-pointer transition duration-150 hover:bg-gray-400">Category 8</button>
-        </div>
-      </div>
+      <Navbar handleSearch={handleSearch} />
+      <Category />
 
       <section className="text-gray-600 body-font">
-        <div className="flex  flex-wrap mx-auto p-10">
+        <div className="flex  flex-wrap mx-auto p-2">
           {
             data?.map((items) => (
               <div className="p-4 md:w-1/2 lg:w-1/3" key={items.id}>
@@ -46,6 +42,8 @@ const Home = (props) => {
               </div>
             ))
           }
+
+          <Filter items={items} searchQuery={searchQuery} />
         </div>
       </section>
 
