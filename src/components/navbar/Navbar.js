@@ -25,7 +25,7 @@ const Navbar = ({ handleSearch }) => {
   return (
     <div>
       <header>
-        <nav className="bg-black text-white flex items-center justify-between py-2 px-4 md:px-10">
+        <nav className=" bg-black text-white flex items-center justify-between py-2 px-4 md:px-10">
 
           <span
             onClick={crtControl}
