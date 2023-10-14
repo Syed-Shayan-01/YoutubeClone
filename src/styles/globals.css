@@ -27,10 +27,11 @@
 } */
 
 body {
-overflow-x: hidden;
-
+  overflow-x: hidden;
 }
 
-#text{
- width: 1%;
+#text {
+  width: 1%;
 }
+
+

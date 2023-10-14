@@ -29,41 +29,37 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const DataCard = ({ data }) => {
   return (
-    <div>
+
+    <>
       {
-        data.map((item) => {
-          return (
-            <>
-              <div className="flex">
-                <div className="relative w-80 h-48 mr-2 flex items-center flex-shrink-0">
-                  <img
-                    src={"https://fastly.picsum.photos/id/339/536/354.jpg?hmac=1r2hSWCuclyGNGdoKel-sJ7ICl-05e2Ln1LQTo65buA"}
-                    className="w-full h-full object-cover md:rounded-lg"
-                    alt="Thumbnail"
-                  />
-                </div>
-                <div>
-                  <div className="h-9 w-9 rounded-full overflow-hidden mb-1">
-                    <img
-                      className="w-full h-full object-cover"
-                      src="https://fastly.picsum.photos/id/339/536/354.jpg?hmac=1r2hSWCuclyGNGdoKel-sJ7ICl-05e2Ln1LQTo65buA"
-                      alt="Avatar"
-                    />
+        data.map((items) => {
+          return (<>
+            <div class='flex items-center'>
+              <article class="video-container">
+                <a href="#" class="thumbnail relative">
+                  <img class="thumbnail-image max-w-min w-80 object-cover bg-gray-400" src={items.vidThumb} />
+                  <div class="absolute bottom-5 right-5 bg-black bg-opacity-85 text-white py-1 px-2 rounded text-xs">12:24</div>
+                </a>
+                <div class="video-bottom-section mt-4 flex items-start">
+                  <a href="#" class="mr-2">
+                    <img class="channel-icon w-9 h-9 rounded-full" src={items.vidThumb} />
+                  </a>
+                  <div class="video-details">
+                    <a href="#" class="video-title text-lg font-bold mb-2 text-black">jghjghj</a>
+                    <a href="#" class="video-channel-name block mb-1 text-gray-500 hover:text-black transition-colors">Channel Name</a>
+                    <div class="video-metadata text-gray-500">
+                      <span>12K views</span>
+                      <span class="mx-1">•</span>
+                      <span>1 week ago</span>
+                    </div>
                   </div>
-                  <div className="leading-9 line-clamp-2">
-                    {/* Add your content for the second image here */}
-                  </div>
                 </div>
-              </div>
-
-
-
-            </>
-
-          )
+              </article>
+            </div>
+          </>)
         })
       }
-    </div>
+    </>
   );
 };
 export default DataCard;
