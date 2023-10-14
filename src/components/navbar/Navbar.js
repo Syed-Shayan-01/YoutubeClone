@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMic } from "react-icons/bs";
 import { PiCameraPlusBold } from "react-icons/pi";
@@ -21,7 +21,6 @@ const Navbar = ({ handleSearch }) => {
     return <div>Loading</div>;
   }
 
-  const [open, isopen] = useState(null);
 
   return (
     <div>
