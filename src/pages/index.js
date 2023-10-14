@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Category from "@/components/category/Category";
 import Navbar from "@/components/navbar/Navbar";
+import { getVideo } from "@/service/vid";
 import Link from "next/link";
 import { useState } from "react";
 const Home = (props) => {
@@ -50,8 +51,7 @@ const Home = (props) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/");
-  const data = await res.json(); // You need to await the JSON parsing
+  const data = await getVideo();
   return {
     props: {
       data,
